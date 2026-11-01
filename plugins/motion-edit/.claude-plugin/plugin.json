@@ -1,0 +1,8 @@
+{
+  "name": "motion-edit",
+  "description": "Turn an edited talking video into a motion-graphics edit: make the animated presentation from its words, then put it on the video with speaker cutouts, smooth transitions and a few sound effects.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Juwany"
+  }
+}

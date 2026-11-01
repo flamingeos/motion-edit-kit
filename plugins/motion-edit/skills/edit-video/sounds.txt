@@ -1,0 +1,30 @@
+# Sound effects used by the engine: <library path> <Mixkit source>. setup.sh downloads each one from Mixkit
+# (Mixkit Sound Effects Free License: free to use in videos, not to resell or share as files). The kit ships none.
+camera/camera-lens-shutter.mp3 https://assets.mixkit.co/active_storage/sfx/1433/1433-preview.mp3
+camera/zoom-air-fast.mp3 https://assets.mixkit.co/active_storage/sfx/2625/2625-preview.mp3
+data/data-compute.mp3 https://assets.mixkit.co/active_storage/sfx/3122/3122-preview.mp3
+film/cassette-stretch.mp3 https://assets.mixkit.co/active_storage/sfx/3097/3097-preview.mp3
+impact/bass-hit-short.mp3 https://assets.mixkit.co/active_storage/sfx/2299/2299-preview.mp3
+impact/hit-blow.mp3 https://assets.mixkit.co/active_storage/sfx/2150/2150-preview.mp3
+impact/impact-deep-whoosh.mp3 https://assets.mixkit.co/active_storage/sfx/1143/1143-preview.mp3
+light/light-sweep-magic.mp3 https://assets.mixkit.co/active_storage/sfx/2586/2586-preview.mp3
+light/shimmer-sparkle-sweep.mp3 https://assets.mixkit.co/active_storage/sfx/2633/2633-preview.mp3
+light/sparkle-poof-hit.mp3 https://assets.mixkit.co/active_storage/sfx/3082/3082-preview.mp3
+light/sparkle-touch.mp3 https://assets.mixkit.co/active_storage/sfx/3083/3083-preview.mp3
+text/marker-pen-line.mp3 https://assets.mixkit.co/active_storage/sfx/2998/2998-preview.mp3
+text/typewriter-digital.mp3 https://assets.mixkit.co/active_storage/sfx/1363/1363-preview.mp3
+transition/air-woosh-deep.mp3 https://assets.mixkit.co/active_storage/sfx/2604/2604-preview.mp3
+transition/air-woosh-quick.mp3 https://assets.mixkit.co/active_storage/sfx/2605/2605-preview.mp3
+transition/sweep-short.mp3 https://assets.mixkit.co/active_storage/sfx/175/175-preview.mp3
+transition/swoosh-quick.mp3 https://assets.mixkit.co/active_storage/sfx/166/166-preview.mp3
+transition/transition-soft.mp3 https://assets.mixkit.co/active_storage/sfx/2608/2608-preview.mp3
+transition/whoosh-fast.mp3 https://assets.mixkit.co/active_storage/sfx/1490/1490-preview.mp3
+transition/whoosh-swirl.mp3 https://assets.mixkit.co/active_storage/sfx/1493/1493-preview.mp3
+transition/wind-swoosh-short.mp3 https://assets.mixkit.co/active_storage/sfx/1461/1461-preview.mp3
+ui/chime-crystal.mp3 https://assets.mixkit.co/active_storage/sfx/3108/3108-preview.mp3
+ui/switch-light.mp3 https://assets.mixkit.co/active_storage/sfx/2579/2579-preview.mp3
+ui/ui-confirm-tone.mp3 https://assets.mixkit.co/active_storage/sfx/2867/2867-preview.mp3
+ui/ui-message-pop.mp3 https://assets.mixkit.co/active_storage/sfx/2354/2354-preview.mp3
+ui/ui-option-select.mp3 https://assets.mixkit.co/active_storage/sfx/2573/2573-preview.mp3
+ui/ui-popup-dry.mp3 https://assets.mixkit.co/active_storage/sfx/2356/2356-preview.mp3
+ui/ui-select-click.mp3 https://assets.mixkit.co/active_storage/sfx/1109/1109-preview.mp3

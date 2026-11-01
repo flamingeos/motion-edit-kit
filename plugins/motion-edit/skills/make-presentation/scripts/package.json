@@ -1,0 +1,8 @@
+{
+  "name": "vsl-motion-graphics-render",
+  "private": true,
+  "description": "Frame-by-frame renderer for VSL motion graphics presentations",
+  "dependencies": {
+    "playwright-core": "1.47.2"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "motion-edit-kit",
+  "description": "Motion-graphics editing for talking videos (VSLs, YouTube, courses).",
+  "owner": {
+    "name": "Juwany"
+  },
+  "plugins": [
+    {
+      "name": "motion-edit",
+      "source": "./plugins/motion-edit",
+      "description": "Presentation → edit → export for any talking video: animated graphics from the video's own words, cut in with speaker cutouts, transitions and sound effects."
+    }
+  ]
+}
