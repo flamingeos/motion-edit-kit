@@ -18,8 +18,6 @@ You need:
 - [ ] **A Mac from 2020 or newer** (Apple M1 chip or later). Older Intel Macs can't run it.
 - [ ] **Claude Code**, either the app or the Terminal version: [code.claude.com](https://code.claude.com)
 - [ ] **Google Chrome**
-- [ ] **A GitHub account** (free) with access to this kit. The kit is private, so the owner sends you an
-      invite by email. **Accept that invite first.**
 
 ---
 
@@ -34,65 +32,40 @@ You need:
    Please install the Motion Edit Kit for me and do the complete setup. You have my permission to run
    the commands this needs.
 
-   1. GitHub sign-in: if the "gh" tool isn't installed, install it with Homebrew (install Homebrew first
-      if it's missing). If I'm not signed in yet ("gh auth status"), run
-      "gh auth login --hostname github.com --git-protocol https --web" and show me the one-time code
-      and link so I can approve it in my browser. Then run "gh auth setup-git".
-   2. Add this line to my ~/.zshrc if it isn't there: export CLAUDE_CODE_PLUGIN_PREFER_HTTPS=1
-   3. Install the kit:
-      claude plugin marketplace add flamingeos/motion-edit-kit
+   1. Install the kit:
+      claude plugin marketplace add https://github.com/flamingeos/motion-edit-kit.git
       claude plugin install motion-edit@motion-edit-kit
-   4. Run the kit's setup.sh from its install folder ("claude plugin list --json" shows it as installPath).
+   2. Run the kit's setup.sh from its install folder ("claude plugin list --json" shows it as installPath).
+      If it asks for Homebrew, install Homebrew first, then run the setup again.
       Tell me when it's finished, and tell me if anything failed.
    ```
 
 3. Claude asks before each step. Say **yes**.
-4. **The only part you do yourself:** Claude shows you a short code and a GitHub link. Open the link, type
-   the code and click **Authorize**. Claude never sees your password.
-5. When Claude says it's done, **close Claude Code and open it again**, so it loads the kit.
+4. When Claude says it's done, **close Claude Code and open it again**, so it loads the kit.
 
 ### Way 2: Do it yourself in Terminal
 
 Open the **Terminal** app. Paste each line, press Enter, and wait for it to finish before the next one.
 
-**Step 1. Sign in to GitHub** (only once per Mac).
+**Step 1. Install the kit.**
 
 ```bash
-brew install gh
-```
-If it says `brew: command not found`, install Homebrew first from [brew.sh](https://brew.sh), then try again.
-
-```bash
-gh auth login --hostname github.com --git-protocol https --web
-```
-Copy the code it shows, press Enter, type the code on the GitHub page that opens, and click **Authorize**.
-
-```bash
-gh auth setup-git
-```
-
-```bash
-echo 'export CLAUDE_CODE_PLUGIN_PREFER_HTTPS=1' >> ~/.zshrc
-```
-
-**Step 2. Install the kit.** Close Terminal and open a new window, then run:
-
-```bash
-claude plugin marketplace add flamingeos/motion-edit-kit
+claude plugin marketplace add https://github.com/flamingeos/motion-edit-kit.git
 ```
 
 ```bash
 claude plugin install motion-edit@motion-edit-kit
 ```
 
-**Step 3. Run the setup.** This installs the tools the kit uses. It takes about 1–5 minutes.
+**Step 2. Run the setup.** This installs the tools the kit uses. It takes about 1–5 minutes.
 
 ```bash
 bash "$(ls -d ~/.claude/plugins/cache/motion-edit-kit/motion-edit/*/ | sort -V | tail -1)setup.sh"
 ```
 It should end with `Done.` (This line finds the newest installed version of the kit and runs its setup.)
+If it says Homebrew is needed, install it from [brew.sh](https://brew.sh) and run the line again.
 
-**Step 4.** Open Claude Code (or restart it if it was open).
+**Step 3.** Open Claude Code (or restart it if it was open).
 
 ---
 
@@ -140,8 +113,8 @@ bash "$(ls -d ~/.claude/plugins/cache/motion-edit-kit/motion-edit/*/ | sort -V |
 
 | What you see | What to do |
 |---|---|
-| `Repository not found` or `Permission denied` when installing | Accept the GitHub invite email, then check you're signed in: `gh auth status` |
 | `claude: command not found` | Install the Terminal version of Claude Code: [code.claude.com](https://code.claude.com) |
+| `Failed to clone marketplace` | Check your internet connection and that the link is typed exactly as above |
 | `This kit needs a Mac with Apple silicon` | The Mac is too old (Intel). Use a 2020-or-newer Mac |
 | `Google Chrome not found` | Install Google Chrome, then run the setup again |
 | `/motion-edit:...` commands don't show up | Close Claude Code completely and open it again |
@@ -165,3 +138,10 @@ plugins/motion-edit/
   skills/edit-video/           how to edit (the engine + a plan template for each video)
   skills/full-edit/            the whole thing, start to finish
 ```
+
+---
+
+## Licence
+
+Made by Juwany. Free to use, change and share under the [MIT licence](LICENSE): keep the copyright notice
+when you share it. The outside tools it downloads have their own licences, listed in [CREDITS.md](CREDITS.md).
