@@ -11,20 +11,37 @@ Works for VSLs, YouTube videos, course lessons and any other talking video.
 
 ## What you need
 
-- A Mac with [Claude Code](https://code.claude.com), [Homebrew](https://brew.sh) and Google Chrome.
+- A Mac with Apple silicon (M1 or newer), with [Claude Code](https://code.claude.com) and Google Chrome.
+  [Homebrew](https://brew.sh) is only needed if the Mac is missing ffmpeg, Node or Python.
+- A GitHub account with access to this repository (it's private): accept the invite email from GitHub.
 - Your video, already cut and colour-corrected (CapCut or any editor).
 
 ## Install
 
-In Claude Code:
+**1. Sign in to GitHub on your Mac** (one time), so Claude Code can download a private repository. In Terminal:
 
 ```
-/plugin marketplace add flamingeos/motion-edit-kit
-/plugin install motion-edit@motion-edit-kit
+brew install gh
+gh auth login
+gh auth setup-git
+echo 'export CLAUDE_CODE_PLUGIN_PREFER_HTTPS=1' >> ~/.zshrc
 ```
 
-Then ask Claude to "run the motion-edit setup". It runs `plugins/motion-edit/setup.sh` once, which installs
-ffmpeg, Whisper, the renderer and the sound effects. This takes 5–10 minutes the first time.
+**2. Install the kit.** Open a new Terminal window and run:
+
+```
+claude plugin marketplace add flamingeos/motion-edit-kit
+claude plugin install motion-edit@motion-edit-kit
+```
+
+**3. Run the setup.** Start Claude Code and ask it to "run the motion-edit setup". This runs
+`plugins/motion-edit/setup.sh` once, which installs Whisper, the renderer and the sound effects (about 5 minutes).
+The first transcription also downloads Whisper's model once (about 1.6 GB).
+
+## Updates
+
+New versions arrive when you run `claude plugin marketplace update motion-edit-kit` and then
+`claude plugin update motion-edit@motion-edit-kit`. Restart Claude Code afterwards.
 
 ## Use
 
