@@ -105,7 +105,7 @@ If the video is already edited and transcribed (full-edit / edit-video `prep.py`
 ## 6. Render every scene to MP4
 
 ```bash
-cd scripts && npm install           # once: installs playwright-core
+cd scripts && [ -d node_modules ] || npm install   # first use, and again after each kit update (new folder)
 node render.js "http://localhost:8765/<client>-<video>.html?v=1" "../graphics-<video>" 30
 # only some scenes (1-based):
 node render.js "<url>" "<outDir>" 30 4,11
